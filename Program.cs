@@ -1,5 +1,6 @@
-﻿using Telegram.Bot;
+﻿using System.Configuration;
 using ReminderBot.src.Database;
+using ReminderBot.src.Bot;
 
 namespace ReminderBot
 {
@@ -7,7 +8,14 @@ namespace ReminderBot
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            TelegramBot bot = new TelegramBot();
+            bot.StartReceiving();
+
+            while (true)
+            {
+                var input = Console.ReadLine();
+                if (input == "stop") break;
+            }
         }
     }
 }

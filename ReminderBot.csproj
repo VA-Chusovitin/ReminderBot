@@ -14,4 +14,28 @@
     <PackageReference Include="Telegram.Bot" Version="19.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Localization\Comd.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Comd.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\ComdDescr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ComdDescr.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Localization\Comd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Comd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\ComdDescr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ComdDescr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
