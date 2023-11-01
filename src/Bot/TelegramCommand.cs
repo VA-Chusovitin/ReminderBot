@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using ReminderBot.src.Database;
 
 namespace ReminderBot.src.Bot
 {
     internal abstract class TelegramCommand
     {
+        protected static SqlDbContext _db = new SqlDbContext();
+
         public string Name { get;}
         public Func<string, string> Description { get; }
         public byte MinArgs { get; }

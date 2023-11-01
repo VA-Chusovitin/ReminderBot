@@ -13,5 +13,15 @@ namespace ReminderBot.src.Database.Models
         public string? LastName { get; set; }
         public string? Username { get; set; }
         public short TimezoneInMinutes {  get; set; }
+
+        public User(long id, string firstName, string? lastName=null, string? username=null,
+            short timezoneInMinutes=0)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Username = username;
+            TimezoneInMinutes = timezoneInMinutes;
+        }
     }
 }
